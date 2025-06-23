@@ -1,0 +1,137 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: linear-gradient(to right, #ff416c, #3e0471);
+  background-attachment: fixed;
+  overscroll-behavior: none;
+  color: #333;
+}
+
+/* Chrome, Edge, Safari */
+body::-webkit-scrollbar,
+.iframe-container::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+body::-webkit-scrollbar-track,
+.iframe-container::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+body::-webkit-scrollbar-thumb,
+.iframe-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+}
+
+body::-webkit-scrollbar-thumb:hover,
+.iframe-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+
+@keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 64, 112, 0.4), 0 0 20px rgba(62, 4, 113, 0.4);
+  }
+  50% {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 64, 112, 0.7), 0 0 40px rgba(62, 4, 113, 0.6);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.3), 0 0 10px rgba(255, 64, 112, 0.4), 0 0 20px rgba(62, 4, 113, 0.4);
+  }
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+  animation: glowPulse 2.5s ease-in-out infinite;
+}
+
+
+#root {
+  min-height: 100vh;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.app {
+  width: 100%;
+  max-width: 960px;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  font-size: 1.2rem;
+  padding: 16px 24px;
+  border-radius: 8px;
+  min-height: 60px;
+  margin-bottom: 30px;
+  width: 100%;
+  max-width: 600px;
+  justify-content: center;
+  background-color: #333;
+}
+
+.status.success {
+  color: #52fe08;
+  font-weight: 600;
+}
+
+.status.loading {
+  color: #52fe08;
+}
+
+.spinner {
+  font-family: monospace;
+  margin-right: 10px;
+  animation: pulse 0.6s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.log-text {
+  font-weight: 500;
+  color: #52fe08;
+}
+
+.iframe-container {
+  width: 95vw;
+  height: 80vh;
+  border-radius: 12px;
+  overflow: hidden;
+  background: transparent;
+}
+
+.preview-iframe {
+  width: 100%;
+  height: 600px;
+  border: none;
+  display: block;
+}
+
+
