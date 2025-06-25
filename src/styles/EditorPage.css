@@ -1,0 +1,184 @@
+.app {
+  width: 100%;
+  height: 100vh;
+  padding: 40px 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+        @keyframes glowPulse {
+  0% {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2), 0 0 15px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 30px rgba(255, 255, 255, 0.4), 0 0 60px rgba(255, 255, 255, 0.4);
+  }
+  100% {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.2), 0 0 15px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 255, 255, 0.2);
+  }
+}
+
+@keyframes growAndShrink {
+    0% {
+      transform: scale(1);
+    }
+
+    50% {
+      transform: scale(1.05);
+    }
+    100% {
+      transform: scale(1);
+    }
+}
+        @keyframes messageSlide {
+          0% {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          10% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          90% {
+            opacity: 1;
+            transform: translateY(0);
+          }
+          100% {
+            opacity: 0;
+            transform: translateY(-10px);
+          }
+        }
+
+         @keyframes titleFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.fade-in {
+  animation: fadeInAnimation 3s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInAnimation {
+  to {
+    opacity: 1;
+  }
+}
+
+.title {
+  margin-bottom: 20px;
+  background: linear-gradient(90deg, #ffffff, #c800ff, #ff416c, #fff);
+  background-size: 300% 300%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+  font-size: 4rem;
+  animation: titleFlow 3s ease-in-out infinite;
+}
+
+        .status {
+          display: flex;
+          align-items: center;
+          font-size: 1.2rem;
+          padding: 16px 24px;
+          border-radius: 8px;
+          min-height: 60px;
+          margin-bottom: 30px;
+          width: 100%;
+          max-width: 600px;
+          justify-content: center;
+        }
+
+        .status.success {
+          color: #fff;
+          font-weight: 600;
+        }
+
+        .status.loading {
+          color: #fff;
+        }
+
+        .spinner {
+          font-family: monospace;
+          margin-right: 10px;
+          animation: pulse 0.6s infinite;
+        }
+
+        @keyframes pulse {
+          0%, 100% { opacity: 0.3; }
+          50% { opacity: 1; }
+        }
+
+        .log-text {
+          animation: growAndShrink 3s ease-in-out infinite;
+          font-weight: 500;
+          color: #fff;
+        }
+
+        .setup-messages {
+            height: 60px;
+          width: 100%;
+          max-width: 700px;
+          margin-bottom: 30px;
+          min-height: 80px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+        }
+
+        .message-container {
+          display: flex;
+          align-items: center;
+          padding: 20px 24px;
+          animation: messageSlide 3s ease-in-out infinite;
+        }
+
+        .setup-message {
+          color: white;
+          font-size: 1.1rem;
+          font-weight: 500;
+          margin: 0;
+          line-height: 1.4;
+          text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .iframe-container {
+          width: 95vw;
+          height: 80vh;
+          border-radius: 12px;
+          overflow: hidden;
+          background: transparent;
+        }
+
+        .preview-iframe {
+          width: 100%;
+          height: 600px;
+          border: none;
+          display: block;
+        }
+
+        @media (max-width: 768px) {
+          .title {
+            font-size: 2.2rem;
+          }
+          
+          .setup-message {
+            font-size: 0.9rem;
+          }
+          
+          .message-container {
+            padding: 16px 20px;
+          }
+        }
