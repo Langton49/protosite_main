@@ -3,6 +3,7 @@ import { WebContainer } from '@webcontainer/api';
 import '../styles/EditorPage.css';
 
 const backendUrl = import.meta.env.VITE_BACKEND_URL;
+
 const spinnerChars = ['\\', '|', '/', '-', '\\', '|'];
 const setupMessages = [
     "Websites with less content or a smaller scroll area will produce more accurate results.",
@@ -65,6 +66,7 @@ const EditorPage = () => {
     /* Call API immediately on mount.*/
     useEffect(() => {
         setFadeIn(true);
+        console.log(`Backend URL: ${backendUrl}`);
         fetchApp();
     }, []);
 
