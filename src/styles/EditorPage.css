@@ -77,7 +77,7 @@
 
 .title {
   margin-bottom: 20px;
-  background: linear-gradient(90deg, #ffffff, #c800ff, #ff416c, #fff);
+  background: linear-gradient(90deg, #8e2de2, #ff416c, #ff416c, #8e2de2);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -101,12 +101,14 @@
         }
 
         .status.success {
-          color: #fff;
+          
+    color: #6a3093;
           font-weight: 600;
         }
 
         .status.loading {
-          color: #fff;
+          
+    color: #6a3093;
         }
 
         .spinner {
@@ -123,7 +125,7 @@
         .log-text {
           animation: growAndShrink 3s ease-in-out infinite;
           font-weight: 500;
-          color: #fff;
+    color: #6a3093;
         }
 
         .setup-messages {
@@ -146,7 +148,7 @@
         }
 
         .setup-message {
-          color: white;
+    color: #6a3093;
           font-size: 1.1rem;
           font-weight: 500;
           margin: 0;

@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: radial-gradient(circle, #e06eff30, #fff 90%);
+  background-attachment: fixed;
+  overscroll-behavior: none;
+  color: #333;
+}
+
+.app_logo {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+}

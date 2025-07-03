@@ -15,7 +15,7 @@
   font-size: 4rem;
   font-weight: bold;
   margin-bottom: 24px;
-  background: linear-gradient(90deg, #ffffff, #c800ff, #ff416c, #fff);
+  background: linear-gradient(90deg, #8e2de2, #ff416c, #ff416c, #8e2de2);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -25,7 +25,7 @@
 
 .home p {
     font-weight: 600;
-    color: #fff;
+    color: #6a3093;
     font-size: 1rem;;
 }
 

@@ -1,14 +1,3 @@
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Roboto, sans-serif;
-  background: linear-gradient(to right, #ff416c, #3e0471);
-  background-attachment: fixed;
-  overscroll-behavior: none;
-  color: #333;
-}
-
 /* Chrome, Edge, Safari */
 body::-webkit-scrollbar,
 .iframe-container::-webkit-scrollbar {

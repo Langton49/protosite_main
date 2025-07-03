@@ -12,7 +12,7 @@ function Home() {
         <div className={`home ${fadeIn ? 'fade-in' : ''}`}>
             <h1>Welcome to Protosite</h1>
             <p>
-                Protosite is a Canva app that allows users to create React app from their website designs. Utilizing AI,
+                Protosite is a Canva app that allows users to create a React app from their website designs. Utilizing AI,
                 Protosite generates a Vite app that is beginner-friendly, well documented, and ready for deployment with GitHub.
             </p>
         </div>
